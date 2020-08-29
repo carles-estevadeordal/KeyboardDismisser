@@ -202,7 +202,7 @@ open class KeyboardDismisser : NSObject
     }
     
     
-    open static func dismissKeyboard()
+    public static func dismissKeyboard()
     {
         for window in UIApplication.shared.windows
         {
