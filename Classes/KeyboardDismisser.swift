@@ -32,7 +32,7 @@ open class KeyboardDismisser : NSObject
 {
     public static let shared:KeyboardDismisser = KeyboardDismisser()
     
-    weak var delegate: KeyboardDismisserDelegate?
+    open weak var delegate: KeyboardDismisserDelegate?
     
     open var buttonImage: UIImage = UIImage(named: "KeyboardDismisserIcon.png", in: Bundle(for: KeyboardDismisser.self), compatibleWith: nil)!
     open var buttonSize: CGSize = CGSize(width: 30, height: 30)
