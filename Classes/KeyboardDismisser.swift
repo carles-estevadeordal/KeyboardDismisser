@@ -24,7 +24,7 @@
 
 import UIKit
 
-protocol KeyboardDismisserDelegate: class {
+public protocol KeyboardDismisserDelegate: class {
     func resignDismisser()
 }
 
