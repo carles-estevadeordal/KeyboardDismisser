@@ -24,10 +24,15 @@
 
 import UIKit
 
+protocol KeyboardDismisserDelegate: class {
+    func resignDismisser()
+}
+
 open class KeyboardDismisser : NSObject
 {
     public static let shared:KeyboardDismisser = KeyboardDismisser()
     
+    weak var delegate: KeyboardDismisserDelegate?
     
     open var buttonImage: UIImage = UIImage(named: "KeyboardDismisserIcon.png", in: Bundle(for: KeyboardDismisser.self), compatibleWith: nil)!
     open var buttonSize: CGSize = CGSize(width: 30, height: 30)
@@ -189,11 +194,15 @@ open class KeyboardDismisser : NSObject
     
     @objc func dismissButtonAction()
     {
-        KeyboardDismisser.dismissKeyboard()
+        if let delegate = delegate {
+            delegate.resignDismisser()
+        } else {
+            KeyboardDismisser.dismissKeyboard()
+        }
     }
     
     
-    public static func dismissKeyboard()
+    open static func dismissKeyboard()
     {
         for window in UIApplication.shared.windows
         {
