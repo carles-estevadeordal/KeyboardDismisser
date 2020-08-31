@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'KeyboardDismisser'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'KeyboardDismisser is a little Swift 4.x pod that adds a button that can dismiss keyboard'
  
   s.description      = <<-DESC
