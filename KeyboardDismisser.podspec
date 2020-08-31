@@ -13,6 +13,7 @@ KeyboardDismisser is a little Swift 4.x pod that adds a button that can dismiss 
   s.source           = { :git => 'https://github.com/yagiz/KeyboardDismisser.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '9.0'
-  s.source_files = 'Classes/**/*.{swift,xib,png}'
+  s.source_files = 'Classes/**/*.{swift}'
+  s.resources = 'Classes/**/*.{xib,png}'
  
 end
