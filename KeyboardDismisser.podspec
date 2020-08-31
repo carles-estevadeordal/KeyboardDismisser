@@ -14,6 +14,5 @@ KeyboardDismisser is a little Swift 4.x pod that adds a button that can dismiss 
  
   s.ios.deployment_target = '9.0'
   s.source_files = 'Classes/**/*.{swift}'
-  s.resources = 'Classes/**/*.{xib,png}'
- 
+  s.resource_bundles = { 'KeyboardDismisser' => ['Classes/**/*.{xib,png}'] }
 end
