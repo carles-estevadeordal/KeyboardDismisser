@@ -84,6 +84,8 @@ open class KeyboardDismisser : NSObject
             self.dismissButton.setImage(self.buttonImage, for: .normal)
             self.dismissButton.addTarget(self, action: #selector(self.dismissButtonAction), for: .touchUpInside)
             self.dismissButton.alpha = 0
+            self.dismissButton.accessibilityIdentifier = "keyboardDismisserButton"
+            self.dismissButton.isAccessibilityElement = true
         }
     }
     
